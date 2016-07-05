@@ -1,0 +1,29 @@
+BasicConfig:
+  minNoData: 20
+  noOfDays: 60
+
+AnomalyDb:
+  ip: '10.33.105.214' #'localhost' #
+  userName: 'verifyrw' #'root' #
+  password: 'eqzqlr' #'password' #
+  dbName: 'verification'
+  tableName: 'ciPriceVerificationTable'
+
+Skyline:
+  StddevFromMovingAverage: .5
+  StddevFromAverage: 0
+  MeanSubtractionCumulation: 0
+  HistogramBins: .1
+  AlgosThreshold: .6
+
+
+StddevFromMovingAverage:
+  com: 10
+  maxTimesThanStdDev: 2
+  minTimesThanMean: .05
+  minBaseDifference: 200
+
+
+HistogramBins:
+  noOfBins: 10
+  minBinSize: 2

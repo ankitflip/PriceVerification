@@ -1,0 +1,32 @@
+Skyline:
+  StddevFromMovingAverage: .5
+  StddevFromAverage: .1
+  MeanSubtractionCumulation: .1
+  HistogramBins: .1
+  AlgosThreshold: .6
+
+
+StddevFromMovingAverage:
+    com: 10
+    maxTimesThanStdDev: 2
+    minTimesThanMean: .05
+    minBaseDifference: 200
+
+MedianAbsoluteDeviation:
+    maxTimesThanMedianDeviation: 3
+    minTimesThanMean: .05
+    minBaseDifference: 200
+
+StddevFromAverage:
+    maxTimesThanStdDev: 3
+    minTimesThanMean: .05
+    minBaseDifference: 200
+
+MeanSubtractionCumulation:
+    maxTimesThanStdDev: 3
+    minTimesThanMean: .05
+    minBaseDifference: 200
+
+HistogramBins:
+    noOfBins: 10
+    minBinSize: 2
