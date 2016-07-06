@@ -897,7 +897,8 @@ def new_plotData(valueListFilename):
 	plt.show()
 
 def new_makeClusterKMeans(valueListFilename):
-	for noOfClusters in [3]:
+	maxNoOfClusters = 20
+	for noOfClusters in range(maxNoOfClusters):
 		noOfClusters += 1
 		valueListFile = open(valueListFilename, 'r')
 
@@ -993,7 +994,7 @@ def main():
 	#print(fsnList)
 	lot1File.close()
 	'''
-	'''
+	
 	#for eachFsn in fsnList:
 	new_inputDumpFile_to_cleaned('../fsnDumpData/MOBCPHUF5EYDP2GB', '../fsnDumpData/cleanedInputDumpFile', 'a')
 	
@@ -1010,7 +1011,7 @@ def main():
 	new_featureScalingTrainData('../fsnDumpData/new_trainData/mobile', '../fsnDumpData/new_featureScaledTrainData/mobile', True)
 	
 	new_plotData('../fsnDumpData/new_featureScaledTrainData/mobile')
-	'''
+	
 	new_makeClusterKMeans('../fsnDumpData/new_featureScaledTrainData/mobile')
 	'''
 	print (eps)
