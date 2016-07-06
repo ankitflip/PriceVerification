@@ -219,9 +219,6 @@ def new_cleaned_to_fsnInputFile(inputFilename, outputFilename, outputFileAttachT
 	outputFile.close()
 	inputFile.close()
 
-	#print("primaryKey = %s"%primaryKey)
-	#print("noOfCompetitors = %d"%noOfCompetitors)
-	#print("noOfClash = %d"%noOfClash)
 	print("last lineNo = %d"%lineNo)
 	
 '''
@@ -379,9 +376,6 @@ def new_verticalsFileNormalization(inputFilename, outputFilename, fileWrite):
 	
 
 def new_makeTrainData(inputFilename, outputFilename, fileWrite):
-	#inputFilename = '../new_normalized_sorted_verticals/' + inputFilename
-	#outputFilename = '../new_trainData/' + outputFilename
-
 	inputFile = open(inputFilename, 'r')
 	
 	if fileWrite:
@@ -450,10 +444,6 @@ def new_makeTrainData(inputFilename, outputFilename, fileWrite):
 
 		tempList.append(rangeNo)
 
-		#train_aiADSP_diff_fkSP_List.append(aiADSP_diff_fkSP_Value)
-		#train_aiADSP_diff_mrpName_List.append(aiADSP_diff_mrpName_Value)
-
-		#trainValueList.append(tempList)
 		json.dump(tempList, outputFile)
 		outputFile.write('\n')
 		noOfTrain += 1
@@ -461,29 +451,10 @@ def new_makeTrainData(inputFilename, outputFilename, fileWrite):
 		preFsn = fsn_Value
 		preTimeStamp = timeStamp_Value
 		pre_aiADSP = aiADSP_Value
-		'''except:
-			print(inputDict)
-			
-			print('----------------------------------------')
-			for i in range(len(reqOneOfAttr)):
-				for eachReqOneOfAttr in reqOneOfAttr[i]:
-					print(eachReqOneOfAttr)
-					print(inputDict[eachReqOneOfAttr])
-					print( (abs(inputDict[eachReqOneOfAttr] - 0) > eps))
-			print(fkSP_Value)
-			print(mrpName_Value)
-			for eachAttr in allAttrList:
-				print(eachAttr)
-				print(inputDict[eachAttr])
-			
-			sys.exit()
-		'''
 		
 
 	inputFile.close()
 	outputFile.close()
-
-	print('tempCnt = ', tempCnt)
 
 	for rangeIdx in range(noOfRange):
 		print('rangeIdx = ', rangeIdx, '     rangeCnt = ', rangeCnt[rangeIdx])
