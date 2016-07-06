@@ -126,7 +126,7 @@ class NotifKafkaConsumer(object):
 		#consumer = ['ACCEE9M6BSAJEF2P']
 		noOfExceptions = 0
 		noOfAiNotif = 0
-		configFolder = '../Config1.5-5/'
+		configFolder = '../../Config1.5-5/'
 		configFilename = configFolder+'checkForAnomaly.yml'
 		with open(configFilename, 'r') as configFile:
 			configDict = yaml.load(configFile)
